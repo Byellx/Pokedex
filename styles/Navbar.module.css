@@ -3,8 +3,8 @@
     justify-content: space-between;
     padding: 1em 1.2em;
     margin-bottom: 2em;
-    background-color: #1bc;
-    color: #000;
+    background-color: #000;
+    color: #FF4500;
 }
 
 .logo{
@@ -27,7 +27,7 @@
 }
 
 .linkItems a{
-    color: #fff;
+    color: #FF4500;
     text-decoration: none;
     padding: 5px;
     transition: .4s;
@@ -35,5 +35,5 @@
 }
 
 .linkItems a:hover{
-    border-color: #FFF;
+    border-color: #FF4500;
 }

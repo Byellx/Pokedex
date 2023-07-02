@@ -7,15 +7,15 @@
     margin-bottom: 2em;
     width: 23%;
     border-radius: 1em;
-    border: 2px solid #E33D33;
+    border: 2px solid #FF4500;
     box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
     background-color: #333;
-    color: white;
+    color: #FFF;
 }
 
 .card .id{
     margin: 1em 0;
-    background-color: #E33D33;
+    background-color: #FF4500;
     border-radius: 5px;
     padding: 5px;
     color: #FFF;
@@ -33,7 +33,7 @@
 .card .button{
     text-decoration: none;
     background-color: #FFF;
-    color: #222;
+    color: #000;
     padding: .7em 1.2em;
     border-radius: 5px;
     font-weight: bold;
@@ -41,6 +41,6 @@
 }
 
 .card .button:hover{
-    background-color: #E33D33;
+    background-color: #FF4500;
     color: #FFF;
 }

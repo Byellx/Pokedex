@@ -1,8 +1,9 @@
 import Image from "next/image"
+import Link from "next/link"
 import styles from "../../styles/Pokemon.module.css"
 
 export const getStaticPaths = async() => {
-    const maxPokemons = 151
+    const maxPokemons = 1010
     const api = "https://pokeapi.co/api/v2/pokemon/"
     const res = await fetch(`${api}/?limit=${maxPokemons}`)
     const data = await res.json()
@@ -45,7 +46,30 @@ export default function Pokemon({pokemon}){
         pid = `${pokemon.id}`
     }
 
-    console.log(`Id: ${pokemon.id} - Link: ${pid}`)
+    const conditional = () => {
+        if(pokemon.id == 1){
+            return(
+                <>
+                    <Link href={`/pokemon/1010`} legacyBehavior><a>{"<"}</a></Link>
+                    <Link href={`/pokemon/${pokemon.id+1}`} legacyBehavior><a>{">"}</a></Link>
+                </>
+            )
+        }else if(pokemon.id > 1 && pokemon.id < 1010){
+            return(
+                <>
+                    <Link href={`/pokemon/${pokemon.id-1}`} legacyBehavior><a>{"<"}</a></Link>
+                    <Link href={`/pokemon/${pokemon.id+1}`} legacyBehavior><a>{">"}</a></Link>
+                </>
+            )
+        }else{
+            return(
+                <>
+                    <Link href={`/pokemon/${pokemon.id-1}`} legacyBehavior><a>{"<"}</a></Link>
+                    <Link href={`/pokemon/1`} legacyBehavior><a>{">"}</a></Link>
+                </>
+            )
+        }
+    }
 
     return(
         <>
@@ -86,6 +110,10 @@ export default function Pokemon({pokemon}){
                         <h4>Peso:</h4>
                         <p>{pokemon.weight / 10} kg</p>
                     </div>
+                </div>
+
+                <div className={styles.navigation}>
+                    {conditional()}
                 </div>
             </div>
         </>

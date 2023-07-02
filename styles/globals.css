@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
 *{
-    font-family: 'IM Fell Double Pica SC', serif;
+    font-family: 'Fira Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
